@@ -9,74 +9,143 @@
       font-family: Arial, sans-serif;
       margin: 0;
       background: #f4f6f8;
+      color: #333;
+    }
+
+    /* Textos justificados solo en párrafos y listas */
+    p, .about-text, li {
+      text-align: justify;
+      text-indent: 30px;
+    }
+
+    /* Encabezados y subtítulos centrados */
+    h1, h2, h3, .subtitle, .contact p, .location {
       text-align: center;
     }
 
-    header {
-      background: #353377; /* color azul personalizado */
-      color: white;
-      padding: 40px 20px;
+    nav {
+      background: #353377;
+      padding: 15px 20px;
       display: flex;
-      align-items: center;
       justify-content: center;
-      flex-direction: column;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
 
-    .logo-circle {
-      width: 120px;
+    /* Header con logo centrado */
+    header {
+      background: #353377;
+      color: white;
+      text-align: center;
+      padding: 40px 20px 20px 20px;
+      position: relative;
+    }
+    header img.logo {
+      width: 120px; /* logo más grande */
       height: 120px;
       border-radius: 50%;
-      overflow: hidden;
+      border: 3px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      object-fit: cover;
       margin-bottom: 20px;
     }
-
-    .logo-circle img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
     header h1 {
-      margin: 0;
-      font-size: 36px;
+      margin: 10px 0 5px 0;
+      font-size: 3em;
     }
-
-    header p {
-      color: #aa6745; /* color subtitulo */
-      font-size: 18px;
-      margin: 10px 0 0 0;
+    .subtitle {
+      font-size: 1.3em;
+      margin: 0;
+    }
+    header img.banner {
+      width: 33%;
+      height: auto;
+      margin-top: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     section {
-      padding: 40px 20px;
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    section h2 {
+    h2 {
       color: #aa6745;
+      font-size: 2em;
       margin-bottom: 20px;
     }
 
-    section p {
-      text-align: justify;
+    /* Servicios con tarjetas y iconos */
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .service-item {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      flex: 1 1 300px;
+      min-width: 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .service-item h3 {
+      margin-top: 0;
+      color: #353377;
+    }
+    .service-item img.icon {
+      display: block;
       margin: 10px auto;
-      max-width: 800px;
-      line-height: 1.6;
+      width: 40px;
+      height: 40px;
     }
 
+    /* Sobre Nosotros con fondo */
+    .about-us {
+      background: #eaeaf0;
+      border-radius: 15px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Contacto */
+    .contact {
+      text-align: center;
+    }
     .btn {
       display: inline-block;
-      margin-top: 20px;
+      margin: 10px 5px;
       padding: 12px 25px;
       background: #353377;
       color: white;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #2a265d;
     }
 
-    .btn:hover {
-      background: #2a2859;
+    .location {
+      margin-top: 15px;
+      font-size: 1.1em;
     }
 
     footer {
@@ -84,52 +153,90 @@
       color: white;
       padding: 15px;
       font-size: 14px;
+      text-align: center;
     }
 
-    .contact-icons a {
-      margin: 0 10px;
-      color: #353377;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .location {
+    ul {
       margin-top: 10px;
-      font-size: 16px;
+      padding-left: 20px;
+    }
+
+    @media(max-width: 600px){
+      nav {
+        flex-direction: column;
+      }
+      .services-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      header img.banner {
+        width: 70%;
+      }
+      header img.logo {
+        width: 100px;
+        height: 100px;
+      }
     }
   </style>
 </head>
 <body>
 
+<nav>
+  <a href="#services">Servicios</a>
+  <a href="#about">Sobre Nosotros</a>
+  <a href="#contact">Contacto</a>
+</nav>
+
 <header>
-  <div class="logo-circle">
-    <img src="logo.png" alt="Logo GEPSI">
-  </div>
+  <img src="logo.png" alt="Logo GEPSI" class="logo">
   <h1>GEPSI</h1>
-  <p>Generando Encuentros Psicosociales Saludables e Integrales</p>
+  <p class="subtitle">Generando Encuentros Psicosociales Saludables e Integrales</p>
+  <img src="banner.png" alt="Banner GEPSI" class="banner">
 </header>
 
 <section>
-  <h2>Servicios</h2>
-  <p>Psicoterapia: La psicoterapia es un espacio seguro y profesional donde acompañamos a las personas a explorar y comprender sus pensamientos, emociones y comportamientos. Nuestro enfoque se basa en la ética, el respeto y la confidencialidad, promoviendo el bienestar y el crecimiento personal en cada sesión.</p>
-  <p>Nuestros psicólogos ofrecen psicoterapia desde distintas corrientes:</p>
-  <ul style="text-align: justify; max-width: 800px; margin: 0 auto; padding-left: 20px;">
-    <li><strong>Psicoanalítica:</strong> para explorar cómo experiencias pasadas e inconscientes influyen en tu vida actual.</li>
-    <li><strong>Humanista-experiencial:</strong> centrada en conectar con tus emociones y potenciar tu desarrollo personal.</li>
-    <li><strong>Cognitivo-conductual (segunda y tercera generación):</strong> orientada a modificar pensamientos y conductas que generan malestar, incorporando técnicas de aceptación, atención plena y regulación emocional.</li>
-  </ul>
+  <h2>Bienvenido a gepsi.cl</h2>
+  <p>Estamos construyendo algo grande. Pronto más información.</p>
 </section>
 
-<section>
-  <h2>Contacto</h2>
-  <p class="contact-icons">
-    Conecta con nosotros vía <a href="mailto:equipo.gepsi@gmail.com">correo</a> o <a href="https://www.instagram.com/e_gepsi" target="_blank">Instagram</a>
+<section id="services">
+  <h2>Servicios</h2>
+  <div class="services-container">
+    <div class="service-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/2942/2942930.png" alt="Psicoterapia" class="icon">
+      <h3>Psicoterapia Individual</h3>
+      <p>
+        La psicoterapia es un espacio seguro y profesional donde acompañamos a las personas a explorar y comprender sus pensamientos, emociones y comportamientos. Nuestro enfoque se basa en la ética, el respeto y la confidencialidad, promoviendo el bienestar y el crecimiento personal en cada sesión.
+      </p>
+      <p>Nuestros psicólogos ofrecen psicoterapia desde distintas corrientes:</p>
+      <ul>
+        <li><strong>Psicoanalítica:</strong> para explorar cómo experiencias pasadas e inconscientes influyen en tu vida actual.</li>
+        <li><strong>Humanista-experiencial:</strong> centrada en conectar con tus emociones y potenciar tu desarrollo personal.</li>
+        <li><strong>Cognitivo-conductual (segunda y tercera generación):</strong> orientada a modificar pensamientos y conductas que generan malestar, incorporando técnicas de aceptación, atención plena y regulación emocional.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about-us">
+  <h2>Sobre Nosotros</h2>
+  <p class="about-text">
+    GEPSI nace en 2021 con una convicción clara: ofrecer psicoterapia de calidad, cálida en el trato y accesible para la comunidad. Con el tiempo, hemos conformado un equipo diverso, con distintas formaciones teóricas, trayectorias y niveles de experiencia, que incluye diplomados, postítulos, magíster y doctorado, movidos por un interés genuino en la clínica y por la motivación de aportar encuadres y condiciones cuidadas para la psicoterapia.
   </p>
+  <p class="about-text">
+    Creemos profundamente en el cuidado por la clínica, lo que nos impulsa a formarnos de manera continua, a reflexionar sobre nuestra práctica y a seguir aprendiendo, con el propósito de ofrecer procesos terapéuticos cada vez más coherentes con el sentido y ética en psicoterapia.
+  </p>
+  <p class="about-text">
+    En la actualidad, seguimos construyendo este proyecto en equipo, desde la reflexión clínica, el compromiso y la humanidad.
+  </p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contacto</h2>
+  <p>Conecta con nosotros vía correo o Instagram:</p>
+  <a href="mailto:equipo.gepsi@gmail.com" class="btn">📧 Correo</a>
+  <a href="https://www.instagram.com/e_gepsi" class="btn" target="_blank">📸 Instagram</a>
   <p class="location">📍 Arica y Parinacota - Chile 🇨🇱</p>
-  <a href="https://docs.google.com/forms/d/1fEUILo_DuV1l6GbsaX8wUfXQXxFb1zwhtyUZFkPlWkg/viewform?edit_requested=true" 
-     class="btn" target="_blank">
-     Reserva tu hora
-  </a>
 </section>
 
 <footer>
