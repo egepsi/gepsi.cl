@@ -5,222 +5,64 @@
   <title>Equipo GEPSI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #333;
-    }
-
-    header {
-      background: #353377;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    header p {
-      margin: 10px 0 0;
-      font-size: 1.2em;
-      color: #aa6745;
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .intro {
-      text-align: center;
-      margin-bottom: 50px;
-      line-height: 1.6;
-    }
-
-    .team-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .member-card {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .member-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    .member-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-      border: 3px solid #353377;
-    }
-
-    .member-name {
-      font-size: 1.3em;
-      color: #353377;
-      margin: 10px 0 5px;
-    }
-
-    .member-title {
-      font-size: 1.1em;
-      color: #aa6745;
-      margin-bottom: 15px;
-    }
-
-    .member-info {
-      text-align: justify;
-      line-height: 1.5;
-      font-size: 0.95em;
-    }
-
-    footer {
-      text-align: center;
-      background: #353377;
-      color: white;
-      padding: 20px;
-      margin-top: 50px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
-
-      header p {
-        font-size: 1em;
-      }
-    }
+    body { font-family: Arial, sans-serif; margin:0; background:#f4f6f8; text-align:center; }
+    header { background:#353377; color:white; padding:20px; }
+    h1 { margin:0; }
+    section { padding:40px 20px; }
+    .profile { max-width:800px; margin:20px auto; text-align:left; background:white; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+    .profile h2 { color:#aa6745; text-align:center; }
+    .profile p { text-align:justify; line-height:1.5; }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Equipo GEPSI</h1>
-  <p>Generando Encuentros Psicosociales Saludables e Integrales</p>
 </header>
 
-<main>
-  <div class="intro">
-    <p>GEPSI nace en 2021 con una convicción clara: ofrecer psicoterapia de calidad, cálida en el trato y accesible para la comunidad. Con el tiempo, hemos conformado un equipo diverso, con distintas formaciones teóricas, trayectorias y niveles de experiencia. Creemos profundamente en el cuidado por la clínica, lo que nos impulsa a formarnos continuamente y ofrecer procesos terapéuticos coherentes con la ética y sentido en psicoterapia.</p>
-    <p>📍 Arica y Parinacota - Chile 🇨🇱</p>
-    <p>Conecta con nosotros vía correo o Instagram: <a href="mailto:equipo.gepsi@gmail.com">equipo.gepsi@gmail.com</a> | <a href="https://www.instagram.com/e_gepsi" target="_blank">Instagram</a></p>
+<section>
+
+  <div class="profile">
+    <h2>Matías Fuentes F.</h2>
+    <p><strong>Psicólogo.</strong> Enfoque: Cognitivo conductual (segunda y tercera generación) y humanista experiencial. Formación complementaria: Diplomado en psicoterapia Gestalt. Cursando Magíster en Psicología Clínica. Población: Adultos/as.</p>
   </div>
 
-  <div class="team-container">
-
-    <!-- Miembro 1 -->
-    <div class="member-card">
-      <img src="logo.png" alt="Matías Fuentes" class="member-photo">
-      <div class="member-name">Matías Fuentes F.</div>
-      <div class="member-title">Psicólogo</div>
-      <div class="member-info">
-        <strong>Enfoque terapéutico:</strong> Cognitivo-conductual (segunda y tercera generación) y humanista-experiencial.<br>
-        <strong>Formación complementaria:</strong> Diplomado en Psicoterapia Gestalt. Cursando Magíster en Psicología Clínica.<br>
-        <strong>Población:</strong> Atención a adultos/as.
-      </div>
-    </div>
-
-    <!-- Miembro 2 -->
-    <div class="member-card">
-      <img src="logo.png" alt="Bárbara Zumarán" class="member-photo">
-      <div class="member-name">Bárbara Zumarán Q.</div>
-      <div class="member-title">Psicóloga</div>
-      <div class="member-info">
-        <strong>Enfoque terapéutico:</strong> Cognitivo-conductual y humanista-experiencial.<br>
-        <strong>Formación complementaria:</strong> Diplomada en Psicoterapia Gestalt. Diplomada en Sexología Clínica Avanzada y Psicoterapia Sexual Especializada.<br>
-        <strong>Población:</strong> Atención a adultos/as.
-      </div>
-    </div>
-
-    <!-- Miembro 3 -->
-    <div class="member-card">
-      <img src="logo.png" alt="Carolina Álvarez" class="member-photo">
-      <div class="member-name">Carolina Álvarez S.</div>
-      <div class="member-title">Psicóloga</div>
-      <div class="member-info">
-        <strong>Enfoque terapéutico:</strong> Psicodinámico.<br>
-        <strong>Formación complementaria:</strong> Capacitada en violencia de género, trata de personas y nuevas masculinidades.<br>
-        <strong>Población:</strong> Atención a adultos/as.
-      </div>
-    </div>
-
-    <!-- Miembro 4 -->
-    <div class="member-card">
-      <img src="logo.png" alt="Natalia Figueroa" class="member-photo">
-      <div class="member-name">Natalia Figueroa I.</div>
-      <div class="member-title">Psicóloga</div>
-      <div class="member-info">
-        <strong>Enfoque terapéutico:</strong> Cognitivo-conductual y humanista-experiencial.<br>
-        <strong>Formación complementaria:</strong> Diplomada en Terapia Cognitivo-Conductual, Psicoterapia Gestáltica, Psicooncología y Psicoterapia Breve.<br>
-        <strong>Población:</strong> Atención a adultos/as.
-      </div>
-    </div>
-
-    <!-- Miembro 5 -->
-    <div class="member-card">
-      <img src="logo.png" alt="Michael Escobar" class="member-photo">
-      <div class="member-name">Michael Escobar M.</div>
-      <div class="member-title">Psicólogo</div>
-      <div class="member-info">
-        <strong>Enfoque terapéutico:</strong> Humanista-experiencial.<br>
-        <strong>Formación complementaria:</strong> Magíster en Psicoterapia Gestalt por la Universidad Central de Chile. Diplomados en Salud Mental Comunitaria y Psiquiatría, Trauma Complejo, Adopción y Adicciones, además de Postítulo en Psicodrama.<br>
-        <strong>Población:</strong> Atención a adultos/as.
-      </div>
-    </div>
-
-    <!-- Miembro 6 -->
-    <div class="member-card">
-      <img src="logo.png" alt="Carolang Escobar" class="member-photo">
-      <div class="member-name">Carolang Escobar S.</div>
-      <div class="member-title">Psicóloga</div>
-      <div class="member-info">
-        <strong>Enfoque terapéutico:</strong> Humanista-experiencial.<br>
-        <strong>Formación complementaria:</strong> Doctora en Psicología, titulada en la Universidad Católica del Norte y la Universidad de Tarapacá.<br>
-        <strong>Población:</strong> Atención a adultos/as.
-      </div>
-    </div>
-
-    <!-- Miembro 7 -->
-    <div class="member-card">
-      <img src="logo.png" alt="Pía Salazar" class="member-photo">
-      <div class="member-name">Pía Salazar T.</div>
-      <div class="member-title">Psicóloga</div>
-      <div class="member-info">
-        <strong>Enfoque terapéutico:</strong> Psicoanalítico con perspectiva de género.<br>
-        <strong>Formación complementaria:</strong> Diplomada en Políticas de Género desde el Territorio en la Universidad Católica de Temuco.<br>
-        <strong>Población:</strong> Atención a adultos/as.
-      </div>
-    </div>
-
-    <!-- Miembro 8 -->
-    <div class="member-card">
-      <img src="logo.png" alt="Sebastián Testa" class="member-photo">
-      <div class="member-name">Sebastián Testa S.</div>
-      <div class="member-title">Psicólogo</div>
-      <div class="member-info">
-        <strong>Enfoque terapéutico:</strong> Humanista-experiencial.<br>
-        <strong>Población:</strong> Atención a adultos/as.
-      </div>
-    </div>
-
+  <div class="profile">
+    <h2>Bárbara Zumarán Q.</h2>
+    <p><strong>Psicóloga.</strong> Enfoque: Cognitivo conductual y humanista experiencial. Diplomada en Psicoterapia Gestalt y Diplomada en Sexología Clínica Avanzada y Psicoterapia Sexual Especializada. Atención a adultos/as.</p>
   </div>
-</main>
+
+  <div class="profile">
+    <h2>Carolina Alvarez S.</h2>
+    <p><strong>Psicóloga.</strong> Enfoque psicodinámico. Capacitada en violencia de género, trata de personas y nuevas masculinidades.</p>
+  </div>
+
+  <div class="profile">
+    <h2>Natalia Figueroa I.</h2>
+    <p><strong>Psicóloga.</strong> Enfoque cognitivo conductual y humanista experiencial. Diplomada en Terapia Cognitivo-Conductual, Psicoterapia Gestáltica, Psicooncología y Psicoterapia Breve.</p>
+  </div>
+
+  <div class="profile">
+    <h2>Michael Escobar M.</h2>
+    <p><strong>Psicólogo.</strong> Enfoque: Humanista experiencial. Magíster en Psicoterapia Gestalt por la Universidad Central de Chile. Diplomados en Salud Mental Comunitaria, Psiquiatría, Trauma Complejo, Adopción y Adicciones, y Postítulo en Psicodrama.</p>
+  </div>
+
+  <div class="profile">
+    <h2>Carolang Escobar S.</h2>
+    <p><strong>Psicóloga.</strong> Enfoque: Humanista experiencial. Doctora en Psicología titulada en la Universidad Católica del Norte y Universidad de Tarapacá.</p>
+  </div>
+
+  <div class="profile">
+    <h2>Pía Salazar T.</h2>
+    <p><strong>Psicóloga.</strong> Enfoque psicoanalítico con perspectiva de género. Diplomada en políticas de género desde el territorio en la Universidad Católica de Temuco.</p>
+  </div>
+
+  <div class="profile">
+    <h2>Sebastián Testa S.</h2>
+    <p><strong>Psicólogo.</strong> Enfoque: Humanista experiencial. Atención a adultos/as.</p>
+  </div>
+
+</section>
 
 <footer>
   © 2026 GEPSI - Todos los derechos reservados
