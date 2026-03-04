@@ -12,30 +12,41 @@
       text-align: center;
     }
     header {
-      background: #353377; /* color azul que pediste */
+      background: #353377; /* color azul encabezado */
       color: white;
       padding: 40px 20px;
     }
     section {
       padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
     }
     h2 {
-      color: #aa6745; /* color para subtítulos */
+      color: #aa6745; /* color subtítulos */
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px 5px;
+      padding: 12px 25px;
+      background: #353377; /* mismo azul */
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
     }
     footer {
       background: #222;
       color: white;
       padding: 15px;
       font-size: 14px;
+      text-align: center;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #353377; /* mismo color azul de encabezado */
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
+    .service-item, .about-text {
+      margin-bottom: 20px;
+    }
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
     }
   </style>
 </head>
@@ -49,7 +60,45 @@
 <section>
   <h2>Bienvenido a gepsi.cl</h2>
   <p>Estamos construyendo algo grande. Pronto más información.</p>
-  <a href="mailto:contacto@gepsi.cl" class="btn">Contáctanos</a>
+</section>
+
+<section class="services">
+  <h2>Servicios</h2>
+  <div class="service-item">
+    <h3>Psicoterapia</h3>
+    <p>
+      La psicoterapia es un espacio seguro y profesional donde acompañamos a las personas a explorar y comprender sus pensamientos, emociones y comportamientos. Nuestro enfoque se basa en la ética, el respeto y la confidencialidad, promoviendo el bienestar y el crecimiento personal en cada sesión.
+    </p>
+    <p>Nuestros psicólogos ofrecen psicoterapia desde distintas corrientes:</p>
+    <ul>
+      <li><strong>Psicoanalítica:</strong> para explorar cómo experiencias pasadas e inconscientes influyen en tu vida actual.</li>
+      <li><strong>Humanista-experiencial:</strong> centrada en conectar con tus emociones y potenciar tu desarrollo personal.</li>
+      <li><strong>Cognitivo-conductual (segunda y tercera generación):</strong> orientada a modificar pensamientos y conductas que generan malestar, incorporando técnicas de aceptación, atención plena y regulación emocional.</li>
+    </ul>
+    <p>Cada enfoque es adaptado a tus necesidades, creando un acompañamiento cercano y personalizado.</p>
+  </div>
+</section>
+
+<section class="about-us">
+  <h2>Sobre Nosotros</h2>
+  <p class="about-text">
+    GEPSI nace en 2021 con una convicción clara: ofrecer psicoterapia de calidad, cálida en el trato y accesible para la comunidad. Con el tiempo, hemos conformado un equipo diverso, con distintas formaciones teóricas, trayectorias y niveles de experiencia, que incluye diplomados, postítulos, magíster y doctorado, movidos por un interés genuino en la clínica y por la motivación de aportar encuadres y condiciones cuidadas para la psicoterapia.
+  </p>
+  <p class="about-text">
+    Creemos profundamente en el cuidado por la clínica, lo que nos impulsa a formarnos de manera continua, a reflexionar sobre nuestra práctica y a seguir aprendiendo, con el propósito de ofrecer procesos terapéuticos cada vez más coherentes con el sentido y ética en psicoterapia.
+  </p>
+  <p class="about-text">
+    En la actualidad, seguimos construyendo este proyecto en equipo, desde la reflexión clínica, el compromiso y la humanidad.
+  </p>
+</section>
+
+<section class="contact">
+  <h2>Contacto</h2>
+  <p>Conecta con nosotros vía correo o Instagram:</p>
+  <a href="mailto:equipo.gepsi@gmail.com" class="btn">Correo</a>
+  <a href="https://www.instagram.com/e_gepsi" class="btn" target="_blank">Instagram</a>
+  <!-- WhatsApp opcional -->
+  <!-- <a href="https://wa.me/569XXXXXXXX" class="btn" target="_blank">WhatsApp</a> -->
 </section>
 
 <footer>
