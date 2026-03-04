@@ -12,18 +12,17 @@
       color: #333;
     }
 
-    /* Justificación de textos solo en párrafos y listas */
+    /* Textos justificados solo en párrafos y listas */
     p, .about-text, li {
       text-align: justify;
       text-indent: 30px;
     }
 
     /* Encabezados y subtítulos centrados */
-    h1, h2, h3 {
+    h1, h2, h3, .subtitle, .contact p, .location {
       text-align: center;
     }
 
-    /* Barra de navegación */
     nav {
       background: #353377;
       padding: 15px 20px;
@@ -41,21 +40,30 @@
       text-decoration: underline;
     }
 
-    /* Header con logo */
+    /* Header con logo centrado */
     header {
       background: #353377;
       color: white;
       text-align: center;
-      padding: 50px 20px 20px 20px;
+      padding: 40px 20px 20px 20px;
       position: relative;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.8em;
+    header img.logo {
+      width: 120px; /* logo más grande */
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      object-fit: cover;
+      margin-bottom: 20px;
     }
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
+    header h1 {
+      margin: 10px 0 5px 0;
+      font-size: 3em;
+    }
+    .subtitle {
+      font-size: 1.3em;
+      margin: 0;
     }
     header img.banner {
       width: 33%;
@@ -63,20 +71,6 @@
       margin-top: 25px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    /* Logo circular en esquina superior izquierda */
-    header img.logo {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: 2px solid white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      object-fit: cover;
-      z-index: 10;
     }
 
     section {
@@ -179,8 +173,8 @@
         width: 70%;
       }
       header img.logo {
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: 100px;
       }
     }
   </style>
@@ -196,7 +190,7 @@
 <header>
   <img src="logo.png" alt="Logo GEPSI" class="logo">
   <h1>GEPSI</h1>
-  <p>Generando Encuentros Psicosociales Saludables e Integrales</p>
+  <p class="subtitle">Generando Encuentros Psicosociales Saludables e Integrales</p>
   <img src="banner.png" alt="Banner GEPSI" class="banner">
 </header>
 
@@ -209,7 +203,7 @@
   <h2>Servicios</h2>
   <div class="services-container">
     <div class="service-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/2942/2942930.png" alt="Psicoanalítica" class="icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/2942/2942930.png" alt="Psicoterapia" class="icon">
       <h3>Psicoterapia Individual</h3>
       <p>
         La psicoterapia es un espacio seguro y profesional donde acompañamos a las personas a explorar y comprender sus pensamientos, emociones y comportamientos. Nuestro enfoque se basa en la ética, el respeto y la confidencialidad, promoviendo el bienestar y el crecimiento personal en cada sesión.
