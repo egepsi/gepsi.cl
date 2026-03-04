@@ -13,13 +13,13 @@
     }
 
     header {
-      background: #353377;
+      background: #353377; /* color azul personalizado */
       color: white;
-      padding: 20px 40px;
+      padding: 40px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
+      flex-direction: column;
     }
 
     .logo-circle {
@@ -27,9 +27,7 @@
       height: 120px;
       border-radius: 50%;
       overflow: hidden;
-      margin-right: 20px;
-      flex-shrink: 0;
-      transition: transform 0.3s;
+      margin-bottom: 20px;
     }
 
     .logo-circle img {
@@ -38,29 +36,15 @@
       object-fit: cover;
     }
 
-    .logo-circle:hover {
-      transform: scale(1.05);
-    }
-
-    .header-text {
-      text-align: left;
-      max-width: 600px;
-    }
-
-    .header-text h1 {
+    header h1 {
       margin: 0;
       font-size: 36px;
     }
 
-    .header-text p {
-      color: #aa6745;
+    header p {
+      color: #aa6745; /* color subtitulo */
       font-size: 18px;
-      margin: 5px 0 0 0;
-      transition: color 0.3s;
-    }
-
-    .header-text p:hover {
-      color: #d08c6a;
+      margin: 10px 0 0 0;
     }
 
     section {
@@ -70,7 +54,6 @@
     section h2 {
       color: #aa6745;
       margin-bottom: 20px;
-      text-align: center;
     }
 
     section p {
@@ -96,6 +79,13 @@
       background: #2a2859;
     }
 
+    footer {
+      background: #222;
+      color: white;
+      padding: 15px;
+      font-size: 14px;
+    }
+
     .contact-icons a {
       margin: 0 10px;
       color: #353377;
@@ -107,13 +97,6 @@
       margin-top: 10px;
       font-size: 16px;
     }
-
-    footer {
-      background: #222;
-      color: white;
-      padding: 15px;
-      font-size: 14px;
-    }
   </style>
 </head>
 <body>
@@ -122,10 +105,8 @@
   <div class="logo-circle">
     <img src="logo.png" alt="Logo GEPSI">
   </div>
-  <div class="header-text">
-    <h1>GEPSI</h1>
-    <p>Generando Encuentros Psicosociales Saludables e Integrales</p>
-  </div>
+  <h1>GEPSI</h1>
+  <p>Generando Encuentros Psicosociales Saludables e Integrales</p>
 </header>
 
 <section>
@@ -145,7 +126,7 @@
     Conecta con nosotros vía <a href="mailto:equipo.gepsi@gmail.com">correo</a> o <a href="https://www.instagram.com/e_gepsi" target="_blank">Instagram</a>
   </p>
   <p class="location">📍 Arica y Parinacota - Chile 🇨🇱</p>
-  <a href="https://docs.google.com/forms/d/1fEUILo_DuV1l6GbsaX8wUfXxFb1zwhtyUZFkPlWkg/viewform?edit_requested=true" 
+  <a href="https://docs.google.com/forms/d/1fEUILo_DuV1l6GbsaX8wUfXQXxFb1zwhtyUZFkPlWkg/viewform?edit_requested=true" 
      class="btn" target="_blank">
      Reserva tu hora
   </a>
