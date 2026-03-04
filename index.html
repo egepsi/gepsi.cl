@@ -18,6 +18,11 @@
       text-indent: 30px;
     }
 
+    /* Encabezados y subtítulos centrados */
+    h1, h2, h3 {
+      text-align: center;
+    }
+
     /* Barra de navegación */
     nav {
       background: #353377;
@@ -59,12 +64,18 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
+
+    /* Logo circular en esquina superior izquierda */
     header img.logo {
-      position: absolute; /* Logo en esquina superior izquierda */
+      position: absolute;
       top: 15px;
       left: 15px;
       width: 60px;
-      height: auto;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      object-fit: cover;
       z-index: 10;
     }
 
@@ -78,7 +89,6 @@
       color: #aa6745;
       font-size: 2em;
       margin-bottom: 20px;
-      text-align: center;
     }
 
     /* Servicios con tarjetas y iconos */
@@ -104,7 +114,6 @@
     .service-item h3 {
       margin-top: 0;
       color: #353377;
-      text-align: center;
     }
     .service-item img.icon {
       display: block;
@@ -171,6 +180,7 @@
       }
       header img.logo {
         width: 50px;
+        height: 50px;
       }
     }
   </style>
