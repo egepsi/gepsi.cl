@@ -12,7 +12,7 @@
       color: #333;
     }
 
-    /* Justificación y sangría de textos */
+    /* Justificación de textos solo en párrafos y listas */
     p, .about-text, li {
       text-align: justify;
       text-indent: 30px;
@@ -24,6 +24,7 @@
       padding: 15px 20px;
       display: flex;
       justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     nav a {
       color: white;
@@ -35,11 +36,13 @@
       text-decoration: underline;
     }
 
+    /* Header con logo */
     header {
       background: #353377;
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 50px 20px 20px 20px;
+      position: relative;
     }
     header h1 {
       margin: 0;
@@ -49,14 +52,19 @@
       font-size: 1.2em;
       margin-top: 10px;
     }
-
-    /* Banner */
-    header img {
-      max-width: 80%;
+    header img.banner {
+      width: 33%;
       height: auto;
       margin-top: 25px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    header img.logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 60px;
+      height: auto;
     }
 
     section {
@@ -64,13 +72,15 @@
       max-width: 1000px;
       margin: 0 auto;
     }
+
     h2 {
       color: #aa6745;
       font-size: 2em;
       margin-bottom: 20px;
+      text-align: center;
     }
 
-    /* Servicios con tarjetas */
+    /* Servicios con tarjetas y iconos */
     .services-container {
       display: flex;
       flex-wrap: wrap;
@@ -79,26 +89,35 @@
     }
     .service-item {
       background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       flex: 1 1 300px;
       min-width: 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
     .service-item h3 {
       margin-top: 0;
       color: #353377;
+      text-align: center;
+    }
+    .service-item img.icon {
+      display: block;
+      margin: 10px auto;
+      width: 40px;
+      height: 40px;
     }
 
-    /* Sobre Nosotros con fondo claro */
+    /* Sobre Nosotros con fondo */
     .about-us {
       background: #eaeaf0;
-      border-radius: 10px;
+      border-radius: 15px;
       padding: 30px 20px;
-    }
-    .about-text {
-      margin-bottom: 20px;
-      line-height: 1.6;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     /* Contacto */
@@ -114,12 +133,12 @@
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      transition: background 0.3s ease;
     }
     .btn:hover {
       background: #2a265d;
     }
 
-    /* Ubicación */
     .location {
       margin-top: 15px;
       font-size: 1.1em;
@@ -133,13 +152,11 @@
       text-align: center;
     }
 
-    /* Listas de servicios */
     ul {
       margin-top: 10px;
       padding-left: 20px;
     }
 
-    /* Responsivo */
     @media(max-width: 600px){
       nav {
         flex-direction: column;
@@ -148,15 +165,17 @@
         flex-direction: column;
         align-items: center;
       }
-      header img {
-        max-width: 100%;
+      header img.banner {
+        width: 70%;
+      }
+      header img.logo {
+        width: 50px;
       }
     }
   </style>
 </head>
 <body>
 
-<!-- Barra de navegación -->
 <nav>
   <a href="#services">Servicios</a>
   <a href="#about">Sobre Nosotros</a>
@@ -166,8 +185,8 @@
 <header>
   <h1>GEPSI</h1>
   <p>Generando Encuentros Psicosociales Saludables e Integrales</p>
-  <!-- Banner PNG -->
-  <img src="banner.png" alt="Banner GEPSI">
+  <img src="banner.png" alt="Banner GEPSI" class="banner">
+  <img src="logo.png" alt="Logo GEPSI" class="logo">
 </header>
 
 <section>
@@ -179,6 +198,7 @@
   <h2>Servicios</h2>
   <div class="services-container">
     <div class="service-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/2942/2942930.png" alt="Psicoanalítica" class="icon">
       <h3>Psicoterapia Individual</h3>
       <p>
         La psicoterapia es un espacio seguro y profesional donde acompañamos a las personas a explorar y comprender sus pensamientos, emociones y comportamientos. Nuestro enfoque se basa en la ética, el respeto y la confidencialidad, promoviendo el bienestar y el crecimiento personal en cada sesión.
@@ -189,7 +209,6 @@
         <li><strong>Humanista-experiencial:</strong> centrada en conectar con tus emociones y potenciar tu desarrollo personal.</li>
         <li><strong>Cognitivo-conductual (segunda y tercera generación):</strong> orientada a modificar pensamientos y conductas que generan malestar, incorporando técnicas de aceptación, atención plena y regulación emocional.</li>
       </ul>
-      <p>Cada enfoque es adaptado a tus necesidades, creando un acompañamiento cercano y personalizado.</p>
     </div>
   </div>
 </section>
