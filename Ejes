@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejes - GEPSI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    nav {
+      background: #353377;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 15px;
+      font-weight: bold;
+    }
+
+    header {
+      background: #353377;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #aa6745;
+    }
+
+    .eje-item {
+      background: white;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .eje-item:hover {
+      transform: translateY(-5px);
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="equipo.html">Equipo</a>
+  <a href="trayectoria.html">Trayectoria</a>
+  <a href="ejes.html">Ejes</a>
+</nav>
+
+<header>
+  <h1>Nuestros Ejes</h1>
+  <p>Los pilares que orientan nuestro trabajo</p>
+</header>
+
+<section>
+
+  <div class="eje-item">
+    <h2>Atención clínica</h2>
+    <p>
+      Nuestro principal foco es la psicoterapia individual, desarrollada desde distintos enfoques teóricos, con un fuerte compromiso ético, clínico y humano. Este espacio busca acompañar a las personas en la comprensión de sus experiencias, promoviendo procesos de cambio, bienestar y desarrollo personal.
+    </p>
+  </div>
+
+  <div class="eje-item">
+    <h2>Formación y acompañamiento clínico</h2>
+    <p>
+      Integramos a psicólogos y psicólogas recién egresados, brindando un espacio de acompañamiento en el desarrollo de experiencia clínica. Este eje busca apoyar especialmente en etapas de transición hacia una estabilidad laboral, ofreciendo supervisión, aprendizaje continuo y un encuadre ético en el ejercicio profesional.
+    </p>
+  </div>
+
+  <div class="eje-item">
+    <h2>Trabajo comunitario</h2>
+    <p>
+      Participamos activamente en espacios comunitarios como juntas de vecinos, radios, ferias y actividades de voluntariado, promoviendo la salud mental desde una perspectiva preventiva, psicoeducativa y accesible para la comunidad.
+    </p>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 GEPSI
+</footer>
+
+</body>
+</html>
