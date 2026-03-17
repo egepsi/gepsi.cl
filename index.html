@@ -5,6 +5,7 @@
   <title>GEPSI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -12,6 +13,7 @@
       color: #333;
     }
 
+    /* TEXTO GENERAL */
     p, .about-text, li {
       text-align: justify;
       text-indent: 30px;
@@ -29,6 +31,7 @@
       flex-wrap: wrap;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+
     nav a {
       color: white;
       text-decoration: none;
@@ -91,28 +94,44 @@
       padding: 30px 20px;
     }
 
-    /* NUEVOS EJES */
+    /* ===== EJES (ARREGLADO PRO) ===== */
+
+    #ejes p {
+      text-align: center;
+      text-indent: 0;
+    }
+
     .ejes-container {
       display: flex;
-      gap: 20px;
+      gap: 25px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: 30px;
+      margin-top: 40px;
     }
 
     .eje {
       background: white;
       padding: 30px;
       border-radius: 15px;
-      width: 250px;
-      text-align: center;
+      width: 280px;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       cursor: pointer;
       transition: transform 0.3s ease;
+      text-align: center;
     }
 
     .eje:hover {
       transform: translateY(-5px);
+    }
+
+    .eje h3 {
+      color: #353377;
+      margin-bottom: 10px;
     }
 
     .descripcion {
@@ -121,16 +140,11 @@
       overflow: hidden;
       transition: all 0.4s ease;
       margin-top: 10px;
-      text-indent: 0;
     }
 
     .eje:hover .descripcion {
       opacity: 1;
-      max-height: 200px;
-    }
-
-    .eje:hover h3 {
-      color: #aa6745;
+      max-height: 300px;
     }
 
     /* CONTACTO */
@@ -149,6 +163,17 @@
       color: white;
       text-align: center;
       padding: 15px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 600px){
+      header img.banner {
+        width: 70%;
+      }
+
+      .eje {
+        width: 90%;
+      }
     }
 
   </style>
@@ -196,11 +221,10 @@
   </p>
 </section>
 
-<!-- 👇 NUEVA SECCIÓN -->
 <section id="ejes">
   <h2>Nuestros Ejes</h2>
 
-  <p style="text-align:center; max-width:700px; margin:auto;">
+  <p style="max-width:700px; margin:auto;">
     Nuestro trabajo se organiza en torno a tres ejes fundamentales, que orientan nuestra práctica clínica, formativa y comunitaria.
   </p>
 
@@ -216,7 +240,7 @@
     <div class="eje">
       <h3>Formación y acompañamiento clínico</h3>
       <p class="descripcion">
-        Incorporación y acompañamiento de profesionales recién egresados, favoreciendo el desarrollo de su experiencia clínica desde un encuadre ético y reflexivo, como apoyo en sus primeras etapas laborales y en el tránsito hacia una mayor estabilidad profesional.
+        Incorporación y acompañamiento de profesionales recién egresados, favoreciendo el desarrollo de su experiencia clínica, especialmente en etapas de transición hacia una estabilidad laboral, ofreciendo un espacio de apoyo y aprendizaje continuo.
       </p>
     </div>
 
