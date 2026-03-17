@@ -4,23 +4,30 @@
   <meta charset="UTF-8">
   <title>GEPSI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GEPSI: Psicoterapia integral en Arica y Parinacota. Servicios, equipo y contacto.">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background: #f4f6f8;
       color: #333;
+      line-height: 1.6;
     }
 
-    /* Textos justificados solo en párrafos y listas */
-    p, .about-text, li {
+    /* Textos justificados solo en párrafos */
+    p, .about-text {
       text-align: justify;
       text-indent: 30px;
+      margin-bottom: 15px;
     }
 
     /* Encabezados y subtítulos centrados */
     h1, h2, h3, .subtitle, .contact p, .location {
       text-align: center;
+      margin: 10px 0;
     }
 
     nav {
@@ -37,8 +44,9 @@
       margin: 5px 15px;
       font-weight: bold;
     }
-    nav a:hover {
+    nav a:hover, nav a:focus {
       text-decoration: underline;
+      outline: none;
     }
 
     /* Header con logo centrado */
@@ -67,14 +75,15 @@
       margin: 0;
     }
     header img.banner {
-      width: 33%;
+      width: 100%;
+      max-width: 600px;
       height: auto;
       margin-top: 25px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
-    section {
+    main section {
       padding: 50px 20px;
       max-width: 1000px;
       margin: 0 auto;
@@ -140,8 +149,9 @@
       font-weight: bold;
       transition: background 0.3s ease;
     }
-    .btn:hover {
+    .btn:hover, .btn:focus {
       background: #2a265d;
+      outline: none;
     }
 
     .location {
@@ -197,52 +207,54 @@
   <img src="banner.png" alt="Banner GEPSI" class="banner">
 </header>
 
-<section>
-  <h2>Bienvenido a gepsi.cl</h2>
-  <p>Estamos construyendo algo grande. Pronto más información.</p>
-</section>
+<main>
+  <section>
+    <h2>Bienvenido a gepsi.cl</h2>
+    <p>Estamos construyendo algo grande. Pronto más información.</p>
+  </section>
 
-<section id="services">
-  <h2>Servicios</h2>
-  <div class="services-container">
-    <div class="service-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/2942/2942930.png" alt="Psicoterapia" class="icon">
-      <h3>Psicoterapia Individual</h3>
-      <p>
-        La psicoterapia es un espacio seguro y profesional donde acompañamos a las personas a explorar y comprender sus pensamientos, emociones y comportamientos. Nuestro enfoque se basa en la ética, el respeto y la confidencialidad, promoviendo el bienestar y el crecimiento personal en cada sesión.
-      </p>
-      <p>Nuestros psicólogos ofrecen psicoterapia desde distintas corrientes:</p>
-      <ul>
-        <li><strong>Psicoanalítica:</strong> para explorar cómo experiencias pasadas e inconscientes influyen en tu vida actual.</li>
-        <li><strong>Humanista-experiencial:</strong> centrada en conectar con tus emociones y potenciar tu desarrollo personal.</li>
-        <li><strong>Cognitivo-conductual (segunda y tercera generación):</strong> orientada a modificar pensamientos y conductas que generan malestar, incorporando técnicas de aceptación, atención plena y regulación emocional.</li>
-      </ul>
+  <section id="services">
+    <h2>Servicios</h2>
+    <div class="services-container">
+      <div class="service-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/2942/2942930.png" alt="Psicoterapia" class="icon">
+        <h3>Psicoterapia Individual</h3>
+        <p>
+          La psicoterapia es un espacio seguro y profesional donde acompañamos a las personas a explorar y comprender sus pensamientos, emociones y comportamientos. Nuestro enfoque se basa en la ética, el respeto y la confidencialidad, promoviendo el bienestar y el crecimiento personal en cada sesión.
+        </p>
+        <p>Nuestros psicólogos ofrecen psicoterapia desde distintas corrientes:</p>
+        <ul>
+          <li><strong>Psicoanalítica:</strong> para explorar cómo experiencias pasadas e inconscientes influyen en tu vida actual.</li>
+          <li><strong>Humanista-experiencial:</strong> centrada en conectar con tus emociones y potenciar tu desarrollo personal.</li>
+          <li><strong>Cognitivo-conductual (segunda y tercera generación):</strong> orientada a modificar pensamientos y conductas que generan malestar, incorporando técnicas de aceptación, atención plena y regulación emocional.</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="about" class="about-us">
-  <h2>Sobre Nosotros</h2>
-  <p class="about-text">
-    GEPSI nace en 2021 con una convicción clara: ofrecer psicoterapia de calidad, cálida en el trato y accesible para la comunidad. Con el tiempo, hemos conformado un equipo diverso, con distintas formaciones teóricas, trayectorias y niveles de experiencia, que incluye diplomados, postítulos, magíster y doctorado, movidos por un interés genuino en la clínica y por la motivación de aportar encuadres y condiciones cuidadas para la psicoterapia.
-  </p>
-  <p class="about-text">
-    Creemos profundamente en el cuidado por la clínica, lo que nos impulsa a formarnos de manera continua, a reflexionar sobre nuestra práctica y a seguir aprendiendo, con el propósito de ofrecer procesos terapéuticos cada vez más coherentes con el sentido y ética en psicoterapia.
-  </p>
-  <p class="about-text">
-    En la actualidad, seguimos construyendo este proyecto en equipo, desde la reflexión clínica, el compromiso y la humanidad.
-  </p>
-  <a href="equipo.html" class="btn">Conoce a nuestro equipo</a>
-</section>
+  <section id="about" class="about-us">
+    <h2>Sobre Nosotros</h2>
+    <p class="about-text">
+      GEPSI nace en 2021 con una convicción clara: ofrecer psicoterapia de calidad, cálida en el trato y accesible para la comunidad. Con el tiempo, hemos conformado un equipo diverso, con distintas formaciones teóricas, trayectorias y niveles de experiencia, que incluye diplomados, postítulos, magíster y doctorado, movidos por un interés genuino en la clínica y por la motivación de aportar encuadres y condiciones cuidadas para la psicoterapia.
+    </p>
+    <p class="about-text">
+      Creemos profundamente en el cuidado por la clínica, lo que nos impulsa a formarnos de manera continua, a reflexionar sobre nuestra práctica y a seguir aprendiendo, con el propósito de ofrecer procesos terapéuticos cada vez más coherentes con el sentido y ética en psicoterapia.
+    </p>
+    <p class="about-text">
+      En la actualidad, seguimos construyendo este proyecto en equipo, desde la reflexión clínica, el compromiso y la humanidad.
+    </p>
+    <a href="equipo.html" class="btn">Conoce a nuestro equipo</a>
+  </section>
 
-<section id="contact" class="contact">
-  <h2>Contacto</h2>
-  <p>Conecta con nosotros vía correo o Instagram:</p>
-  <a href="mailto:equipo.gepsi@gmail.com" class="btn">📧 Correo</a>
-  <a href="https://www.instagram.com/e_gepsi" class="btn" target="_blank">📸 Instagram</a>
-  <a href="https://docs.google.com/forms/d/1fEUILo_DuV1l6GbsaX8wUfXQXxFb1zwhtyUZFkPlWkg/viewform?edit_requested=true" class="btn" target="_blank">📝 Reserva tu hora</a>
-  <p class="location">📍 Arica y Parinacota - Chile 🇨🇱</p>
-</section>
+  <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <p>Conecta con nosotros vía correo o Instagram:</p>
+    <a href="mailto:equipo.gepsi@gmail.com" class="btn">📧 Correo</a>
+    <a href="https://www.instagram.com/e_gepsi" class="btn" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+    <a href="https://docs.google.com/forms/d/1fEUILo_DuV1l6GbsaX8wUfXQXxFb1zwhtyUZFkPlWkg/viewform?edit_requested=true" class="btn" target="_blank" rel="noopener noreferrer">📝 Reserva tu hora</a>
+    <p class="location">📍 Arica y Parinacota - Chile 🇨🇱</p>
+  </section>
+</main>
 
 <footer>
   © 2026 GEPSI - Todos los derechos reservados
