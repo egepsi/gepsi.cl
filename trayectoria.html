@@ -1,1 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Trayectoria - GEPSI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    nav {
+      background: #353377;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 15px;
+      font-weight: bold;
+    }
+
+    header {
+      background: #353377;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #aa6745;
+    }
+
+    .trayectoria-item {
+      background: white;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 280px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="equipo.html">Equipo</a>
+  <a href="trayectoria.html">Trayectoria</a>
+</nav>
+
+<header>
+  <h1>Trayectoria</h1>
+  <p>Nuestro trabajo en la comunidad</p>
+</header>
+
+<section>
+
+  <div class="trayectoria-item">
+    <h2>Grupos Terapéuticos</h2>
+    <p>
+      Espacios grupales orientados al acompañamiento emocional y al fortalecimiento de recursos personales.
+    </p>
+
+    <div class="gallery">
+      <img src="foto1.jpg">
+      <img src="foto2.jpg">
+    </div>
+  </div>
+
+  <div class="trayectoria-item">
+    <h2>Trabajo Comunitario</h2>
+    <p>
+      Intervenciones en juntas de vecinos y organizaciones territoriales.
+    </p>
+
+    <div class="gallery">
+      <img src="foto3.jpg">
+      <img src="foto4.jpg">
+    </div>
+  </div>
+
+  <div class="trayectoria-item">
+    <h2>Ferias y Actividades</h2>
+    <p>
+      Participación en ferias, incluyendo actividades con comunidades migrantes.
+    </p>
+
+    <div class="gallery">
+      <img src="foto5.jpg">
+      <img src="foto6.jpg">
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 GEPSI
+</footer>
+
+</body>
+</html>
