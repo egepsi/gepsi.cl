@@ -8,8 +8,8 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: Arial, sans-serif; margin:0; background:#f4f6f8; color:#333; line-height:1.6; }
-    p, .about-text { text-align: justify; text-indent: 30px; margin-bottom: 15px; }
-    h1,h2,h3,.subtitle,.contact p,.location { text-align: center; margin: 10px 0; }
+    p { text-align: justify; text-indent: 30px; margin-bottom: 15px; }
+    h1,h2,h3,.subtitle { text-align: center; margin: 10px 0; }
     nav { background: #353377; padding: 15px 20px; display:flex; justify-content:center; flex-wrap:wrap; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
     nav a { color:white; text-decoration:none; margin:5px 15px; font-weight:bold; }
     nav a:hover, nav a:focus { text-decoration:underline; outline:none; }
@@ -17,12 +17,47 @@
     header img.logo { width:120px; height:120px; border-radius:50%; border:3px solid white; box-shadow:0 4px 12px rgba(0,0,0,0.3); object-fit:cover; margin-bottom:20px; }
     header h1 { margin:10px 0 5px 0; font-size:3em; }
     .subtitle { font-size:1.3em; margin:0; }
-    main section { padding:50px 20px; max-width:1000px; margin:0 auto; }
-    h2 { color:#aa6745; font-size:2em; margin-bottom:20px; }
-    .btn { display:inline-block; margin:10px 5px; padding:12px 25px; background:#353377; color:white; text-decoration:none; border-radius:5px; font-weight:bold; transition: background 0.3s ease; }
+
+    main { max-width: 1200px; margin:0 auto; padding:50px 20px; }
+    h2 { color:#aa6745; font-size:2em; margin-bottom:40px; }
+
+    /* Contenedor de tarjetas */
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      flex: 1 1 300px;
+      max-width: 350px;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.6s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card h3 { color:#353377; margin-top:0; }
+    .card p { text-indent: 0; text-align: justify; }
+
+    .btn { display:inline-block; margin:20px 5px; padding:12px 25px; background:#353377; color:white; text-decoration:none; border-radius:5px; font-weight:bold; transition: background 0.3s ease; }
     .btn:hover, .btn:focus { background:#2a265d; outline:none; }
+
     footer { background:#222; color:white; padding:15px; font-size:14px; text-align:center; }
-    @media(max-width:600px){ nav { flex-direction:column; } header img.logo { width:100px; height:100px; } }
+
+    @media(max-width: 600px) {
+      nav { flex-direction: column; }
+      .cards-container { flex-direction: column; align-items: center; }
+    }
   </style>
 </head>
 <body>
@@ -43,13 +78,20 @@
 <main>
   <section>
     <h2>Nuestros Ejes</h2>
-    <p>Clínicio, Apoyo Egresados, Comunitario.</p>
-    <p>Por ejemplo:</p>
-    <ul>
-      <li><strong>Eje Clínico:</strong> Nuestra labor principal es la clínica. Ofrecemos atención psicoterapéutica individual a la comunidad, abordando las diversas temáticas por las que consulta la comunidad, priorizando el bienestar de cada persona.</li>
-      <li><strong>Eje Apoyo a Egresados:</strong> Acompañamos a recién egresados de psicología que ya cuentan con una base clínica, permitiéndoles captar pacientes y adquirir experiencia supervisada. Acompañamos y resolvemos dudas hasta que logren integrarse a un trabajo estable y formal, favoreciendo su desarrollo profesional.</li>
-      <li><strong>Eje Comunitario:</strong> Fomentamos la prevención y promoción de la salud mental mediante psicoeducación, apoyo voluntario, grupos terapéuticos a precios accesibles y otras actividades sociales que contribuyan al bienestar de la comunidad</li>
-    </ul>
+    <div class="cards-container">
+      <div class="card">
+        <h3>Eje Clínico</h3>
+        <p>Nuestra labor principal es la clínica. Ofrecemos atención psicoterapéutica individual a la comunidad, abordando temáticas diversas por las que consulta la comunidad, priorizando el bienestar de cada persona.</p>
+      </div>
+      <div class="card">
+        <h3>Eje de Apoyo a Psicólogos Jóvenes</h3>
+        <p>Acompañamos a egresados de psicología que cuentan con base clínica, permitiéndoles captar pacientes y adquirir experiencia supervisada. Brindamos apoyo, resolución de dudas y acompañamiento hasta que logren integrarse a un trabajo estable y formal.</p>
+      </div>
+      <div class="card">
+        <h3>Eje Comunitario</h3>
+        <p>Fomentamos la prevención y promoción de la salud mental mediante psicoeducación, apoyo voluntario, grupos terapéuticos a precios accesibles y actividades comunitarias que contribuyen al bienestar colectivo.</p>
+      </div>
+    </div>
     <a href="index.html" class="btn">Volver al Inicio</a>
   </section>
 </main>
@@ -57,6 +99,20 @@
 <footer>
   © 2026 GEPSI - Todos los derechos reservados
 </footer>
+
+<script>
+  // Animación al hacer scroll
+  const cards = document.querySelectorAll('.card');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  cards.forEach(card => observer.observe(card));
+</script>
 
 </body>
 </html>
